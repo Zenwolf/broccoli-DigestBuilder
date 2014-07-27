@@ -1,0 +1,30 @@
+{
+  "name": "broccoli-DigestBuilder",
+  "description": "A Broccoli plugin to generate a md5 digest for file names.",
+  "version": "0.0.1",
+  "private": true,
+
+  "author": {
+    "name": "Matthew Jaquish",
+    "url": "https://github.com/Zenwolf"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenwolf/broccoli-DigestBuilder"
+  },
+
+  "license": "Apache 2",
+
+  "keywords": [
+    "broccoli-plugin",
+    "digest",
+    "md5"
+  ],
+
+  "dependencies": {
+    "async": "^0.9.0",
+    "broccoli-writer": "^0.1.1",
+    "rsvp": "^3.0.9"
+  }
+}
