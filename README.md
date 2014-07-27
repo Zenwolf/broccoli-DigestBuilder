@@ -1,3 +1,3 @@
-A Broccoli plugin to create a hex digest that maps file names to unique hex-based entries.
+A Broccoli plugin that creates a digest JSON file that maps filenames to md5 versions of the filenames.
 
 TODO
