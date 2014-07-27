@@ -7,8 +7,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 /*
  * This plugin creates a md5 hex digest for a directory tree based on the
  * content of files that match the specified file extensions comma-separated
- * list, which defaults to just 'js'. It adds the new digest file in the current
- * file tree.
+ * list, which defaults to just 'js'.
  */
 
 'use strict';
