@@ -10,7 +10,8 @@ Config Example
 ```javascript
 {
   outputname: 'digest.json',
-  permutation: 'dev'
+  permutation: 'dev',
+  extensions: ['js']
 }
 ```
 
@@ -38,6 +39,6 @@ Assuming a directory `src` with one file `Foo.js`.
 
 ```json
 {
-"src/Foo.js": "src/Foo-e2246d0f58599ee36fd42d7676594171.js"
+  "src/Foo.js": "src/Foo-e2246d0f58599ee36fd42d7676594171.js"
 }
 ```
