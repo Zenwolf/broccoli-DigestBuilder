@@ -198,7 +198,9 @@ DigestBuilder.prototype.write = function(readTree, destDir) {
         builder.destPath = destDir;
 
         readTree(builder.inputTree).then(function(srcDir) {
+
             builder.srcPath = srcDir;
+
             async.series([
                 function(cb) {
                     builder.processPath(srcDir, cb);
@@ -209,6 +211,7 @@ DigestBuilder.prototype.write = function(readTree, destDir) {
             ], function(err, results) {
                 if (err) {
                     reject(err);
+                    return;
                 }
 
                 msg('Digested ' + Object.keys(builder.digest).length + ' files.');
