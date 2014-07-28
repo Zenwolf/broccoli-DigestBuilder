@@ -127,8 +127,10 @@ DigestBuilder.prototype.handleFileEnd = function(filePath) {
     var name;
 
     dirname = dirname.substring(idx + this.srcPath.length + 1);
-    origName = dirname + path.sep + path.basename(filePath, ext);
-    name = origName + '-';
+    origName = dirname + path.sep + path.basename(filePath);
+    name = dirname + path.sep + path.basename(filePath, ext) + '-';
+
+    msg(origName);
 
     /*
      * Add the permutation at the end so that the same file can exist in
@@ -136,6 +138,7 @@ DigestBuilder.prototype.handleFileEnd = function(filePath) {
      */
     md5sum.update(this.permutation);
     name += md5sum.digest('hex');
+    name += ext;
     this.digest[origName] = name;
 
     msg(origName + ' : ' + name);
